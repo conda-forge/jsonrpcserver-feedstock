@@ -5,11 +5,13 @@ Home: https://github.com/bcb/jsonrpcserver
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jsonrpcserver-feedstock/blob/master/LICENSE.txt)
 
 Summary: Process JSON-RPC requests in Python.
 
+Development: https://github.com/bcb/jsonrpcserver
 
+Documentation: https://jsonrpcserver.readthedocs.io/
 
 Current build status
 ====================
