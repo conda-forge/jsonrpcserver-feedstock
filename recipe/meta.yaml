@@ -1,5 +1,5 @@
 {% set name = "jsonrpcserver" %}
-{% set version = "5.0.0" %}
+{% set version = "5.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -17,10 +17,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
   run:
-    - python >=3.6
-    - apply_defaults <1
+    - python >=3.8
+    - oslash <1
     - jsonschema <4
 
 test:
@@ -33,8 +33,8 @@ about:
   license_family: MIT
   license_file: LICENSE
   summary: Process JSON-RPC requests in Python.
-  doc_url: https://jsonrpcserver.readthedocs.io/
-  dev_url: https://github.com/bcb/jsonrpcserver
+  doc_url: https://www.jsonrpcserver.com/
+  dev_url: https://github.com/explodinglabs/jsonrpcserver
 
 extra:
   recipe-maintainers:
