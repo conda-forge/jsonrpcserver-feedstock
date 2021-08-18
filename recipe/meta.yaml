@@ -28,7 +28,7 @@ test:
     - jsonrpcserver
 
 about:
-  home: https://github.com/bcb/jsonrpcserver
+  home: https://github.com/explodinglabs/jsonrpcserver
   license: MIT
   license_family: MIT
   license_file: LICENSE
