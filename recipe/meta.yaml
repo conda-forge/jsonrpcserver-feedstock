@@ -1,5 +1,5 @@
 {% set name = "jsonrpcserver" %}
-{% set version = "5.0.0" %}
+{% set version = "5.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 09b266ccef3ff5f8c7ca37354181cde80607ee2d2b3a9bcb86fcc4dadea9139c
+  sha256: 347b54ceb61a654817d6e133a3abf6f98e82c8ef195df659effc964b0eae5676
 
 build:
   number: 0
