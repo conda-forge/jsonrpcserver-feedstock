@@ -1,5 +1,5 @@
 {% set name = "jsonrpcserver" %}
-{% set version = "5.0.7" %}
+{% set version = "5.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,37 +7,42 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b15d3fd043ad0c40b2ff17f7df2ddaec2e880bb923b40d133939a107c97fde5c
+  sha256: e85c9147d30198cdaf10801b3e8974f7aa9341ada7865180b0047d0555dc9019
 
 build:
-  number: 1
-  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
 requirements:
   host:
     - pip
+    - flit-core >=3.12,<5
     - python {{ python_min }}
   run:
     - python >={{ python_min }}
     - oslash <1
-    - jsonschema <4
+    - jsonschema <5
 
 test:
   requires:
+    - pip
     - python {{ python_min }}
   imports:
     - jsonrpcserver
+  commands:
+    - pip check
 
 about:
-  home: https://github.com/explodinglabs/jsonrpcserver
+  home: https://bensynapse.github.io/jsonrpcserver/
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: Process JSON-RPC requests in Python.
-  doc_url: https://www.jsonrpcserver.com/
-  dev_url: https://github.com/explodinglabs/jsonrpcserver
+  summary: Process incoming JSON-RPC 2.0 requests in Python.
+  doc_url: https://bensynapse.github.io/jsonrpcserver/
+  dev_url: https://github.com/bensynapse/jsonrpcserver
 
 extra:
   recipe-maintainers:
     - bcb
+    - bensynapse
