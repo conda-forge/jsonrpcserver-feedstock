@@ -28,6 +28,7 @@ test:
   requires:
     - pip
     - python {{ python_min }}
+    - pip
   imports:
     - jsonrpcserver
   commands:
